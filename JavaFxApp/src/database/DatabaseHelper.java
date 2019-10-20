@@ -568,9 +568,9 @@ public class DatabaseHelper {
     
     private static void onlineDBConfig(){
         unicode = "?useUnicode=yes&characterEncoding=UTF-8";
-        DATABASE_URL = "jdbc:mysql://sql2.freemysqlhosting.net:3306/sql2309193";   //?useSSL=true
-        DATABASE_USERNAME = "sql2309193";
-        DATABASE_PASSWORD = "mA6!sV3!";
+        DATABASE_URL = "jdbc:mysql://sql2.freemysqlhosting.net:3306/mydb";   //?useSSL=true
+        DATABASE_USERNAME = "online";
+        DATABASE_PASSWORD = "pass";
         System.out.println("ONLINE");
     }
 
