@@ -1,0 +1,9 @@
+#btns:hover { 
+    -fx-background-color: rgba(135,206,235,0.7);
+    -fx-text-fill: white;   
+}
+
+#btns:pressed { 
+    -fx-background-color: rgba(135,186,215,0.7);
+    -fx-text-fill: white;   
+}

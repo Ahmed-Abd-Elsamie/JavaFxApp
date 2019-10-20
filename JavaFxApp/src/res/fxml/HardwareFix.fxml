@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HardwareFixController">
+   <children>
+      <Label layoutX="745.0" layoutY="102.0" text="رقم الجهاز" textAlignment="RIGHT" />
+      <TextField fx:id="txt_device_num" layoutX="551.0" layoutY="98.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="740.0" layoutY="138.0" text="اسم العميل" textAlignment="RIGHT" />
+      <TextField fx:id="txt_customer_name" layoutX="551.0" layoutY="134.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="739.0" layoutY="178.0" text="رقم التليفون" />
+      <TextField fx:id="txt_phone_num" layoutX="551.0" layoutY="174.0" prefHeight="25.0" prefWidth="174.0" />
+      <Label layoutX="734.0" layoutY="282.0" text="مشكله الجهاز" />
+      <Separator layoutX="381.0" layoutY="313.0" prefHeight="0.0" prefWidth="419.0" />
+      <TextField fx:id="txt_prob" layoutX="504.0" layoutY="336.0" prefHeight="41.0" prefWidth="264.0" />
+      <CheckBox fx:id="Cwin7" layoutX="753.0" layoutY="397.0" mnemonicParsing="false" text="win7" />
+      <CheckBox fx:id="Cwin8" layoutX="666.0" layoutY="397.0" mnemonicParsing="false" text="win8" />
+      <CheckBox fx:id="Cwin10" layoutX="563.0" layoutY="397.0" mnemonicParsing="false" text="win10" />
+      <CheckBox fx:id="Ccheck_all" layoutX="461.0" layoutY="397.0" mnemonicParsing="false" text="check all" />
+      <CheckBox fx:id="Chardware" layoutX="355.0" layoutY="397.0" mnemonicParsing="false" text="hardware" />
+      <CheckBox fx:id="Csoftware" layoutX="229.0" layoutY="397.0" mnemonicParsing="false" text="software" />
+      <Label layoutX="731.0" layoutY="442.0" text="ملحقات الجهاز" />
+      <Separator layoutX="382.0" layoutY="466.0" prefHeight="3.0" prefWidth="419.0" />
+      <CheckBox fx:id="Cbattery" layoutX="749.0" layoutY="480.0" mnemonicParsing="false" text="بطاريه" />
+      <CheckBox fx:id="Ccharger" layoutX="666.0" layoutY="480.0" mnemonicParsing="false" text="شاحن" />
+      <CheckBox fx:id="Cbag" layoutX="563.0" layoutY="480.0" mnemonicParsing="false" text="شنطه" />
+      <CheckBox fx:id="Ccd" layoutX="461.0" layoutY="480.0" mnemonicParsing="false" text="CD" />
+      <Label layoutX="778.0" layoutY="525.0" text="اخري" />
+      <TextField fx:id="other" layoutX="538.0" layoutY="521.0" prefHeight="25.0" prefWidth="226.0" />
+      <Label layoutX="777.0" layoutY="348.0" text="اخري" />
+      <ToolBar prefHeight="50.0" prefWidth="760.0" style="-fx-background-color: #357396;" AnchorPane.bottomAnchor="525.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <Button id="btns" mnemonicParsing="false" onAction="#BtnSave" prefHeight="35.0" prefWidth="63.0" style="-fx-background-color: #357396; -fx-border-color: #fff; -fx-border-radius: 5;" text="حفظ" textFill="WHITE" />
+            <Button id="btns" fx:id="btn_back" mnemonicParsing="false" onAction="#BtnCancel" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: #357396; -fx-border-color: #fff; -fx-border-radius: 5;" stylesheets="@../css/stylesheet.css" text="الغاء" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <CheckBox fx:id="Cprint" mnemonicParsing="false" text="طباعه ايصال" textFill="WHITE" />
+            <Label fx:id="txt_loading" text="جاري التحميل....." textFill="WHITE" visible="false" />
+         </items>
+      </ToolBar>
+      <Label layoutX="367.0" layoutY="61.0" text="صيانه هاردوير">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="750.0" layoutY="222.0" text="اسم الجهاز" />
+      <TextField fx:id="device_name" layoutX="552.0" layoutY="218.0" prefHeight="25.0" prefWidth="174.0" />
+   </children>
+</AnchorPane>
