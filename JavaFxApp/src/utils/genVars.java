@@ -7,6 +7,7 @@ package utils;
 
 import model.DeviceItem;
 import model.PrinterItem;
+import org.json.JSONObject;
 
 /**
  *
@@ -19,5 +20,7 @@ public class genVars {
     public static int type = 0;  //type of clicking on item to show nex window as a printer or device 0 == device AND 1 == printer
     
     public static int hard_soft = 0;  /* 1 == software  AND 0 == hardware */
+    
+    public static JSONObject device = null;
     
 }
