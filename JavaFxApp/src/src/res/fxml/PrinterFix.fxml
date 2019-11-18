@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane style="-fx-background-color: #2c96d4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PrinterFixController">
+   <right>
+      <AnchorPane prefHeight="472.0" prefWidth="557.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txt_device_num" editable="false" layoutX="275.0" layoutY="41.0" prefHeight="25.0" prefWidth="150.0" />
+            <TextField fx:id="txt_customer_name" alignment="CENTER_RIGHT" layoutX="126.0" layoutY="81.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="25.0" prefWidth="300.0" />
+            <TextField fx:id="txt_phone_num" layoutX="126.0" layoutY="122.0" prefHeight="25.0" prefWidth="300.0" />
+            <TextField fx:id="device_name" layoutX="126.0" layoutY="165.0" prefHeight="25.0" prefWidth="300.0" />
+            <Label layoutX="440.0" layoutY="45.0" text="رقم الحباره / الحابعه" textAlignment="RIGHT" textFill="WHITE" />
+            <Label layoutX="447.0" layoutY="83.0" text="اسم العميل" textAlignment="RIGHT" textFill="WHITE" />
+            <Label layoutX="445.0" layoutY="124.0" text="رقم التليفون" textFill="WHITE" />
+            <Label layoutX="452.0" layoutY="169.0" text="اسم الجهاز" textFill="WHITE" />
+            <Label layoutX="478.0" layoutY="220.0" text="مشكله الجهاز" textFill="WHITE" />
+            <Separator layoutX="124.0" layoutY="240.0" prefHeight="0.0" prefWidth="419.0" />
+            <TextField fx:id="txt_prob" layoutX="205.0" layoutY="256.0" prefHeight="41.0" prefWidth="300.0" />
+            <Label layoutX="519.0" layoutY="268.0" text="اخري" textFill="WHITE" />
+            <CheckBox fx:id="Cfill_printer" layoutX="443.0" layoutY="311.0" mnemonicParsing="false" text="ملئ حبر" textFill="WHITE" />
+            <CheckBox fx:id="Cchange_dram" layoutX="352.0" layoutY="311.0" mnemonicParsing="false" text="تغير درام" textFill="WHITE" />
+            <CheckBox fx:id="Ccheck_all" layoutX="264.0" layoutY="311.0" mnemonicParsing="false" text="check all" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </right>
+   <top>
+      <VBox alignment="TOP_CENTER" prefHeight="88.0" prefWidth="760.0" BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #357396;">
+               <items>
+                  <Button mnemonicParsing="false" onAction="#BtnSave" prefHeight="35.0" prefWidth="63.0" style="-fx-background-color: #357396; -fx-border-color: #fff; -fx-border-radius: 5;" text="حفظ" textFill="WHITE" />
+                  <Button fx:id="btn_back" mnemonicParsing="false" onAction="#BtnCancel" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: #357396; -fx-border-color: #fff; -fx-border-radius: 5;" text="الغاء" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <CheckBox fx:id="check_print" mnemonicParsing="false" text="طباعه ايصال" textFill="WHITE" />
+               </items>
+            </ToolBar>
+            <Label text="صيانه احبار" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <BorderPane prefHeight="109.0" prefWidth="760.0" BorderPane.alignment="CENTER">
+         <right>
+            <AnchorPane prefHeight="105.0" prefWidth="660.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="518.0" layoutY="3.0" text="ملحقات الحباره / الطابعه" textFill="WHITE" />
+                  <Separator layoutX="220.0" layoutY="23.0" prefHeight="3.0" prefWidth="419.0" />
+                  <CheckBox fx:id="Ccable_power" layoutX="574.0" layoutY="36.0" mnemonicParsing="false" text="كابل باور" textFill="WHITE" />
+                  <CheckBox fx:id="Ccable_data" layoutX="482.0" layoutY="36.0" mnemonicParsing="false" text="كابل داتا" textFill="WHITE" />
+                  <CheckBox fx:id="Ccd" layoutX="411.0" layoutY="36.0" mnemonicParsing="false" text="CD" textFill="WHITE" />
+                  <Label layoutX="615.0" layoutY="74.0" text="اخري" textFill="WHITE" />
+                  <TextField fx:id="other" layoutX="301.0" layoutY="70.0" prefHeight="25.0" prefWidth="300.0" />
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </bottom>
+   <left>
+      <Label opacity="0.23" text="CS" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="96.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets left="50.0" />
+         </BorderPane.margin>
+      </Label>
+   </left>
+</BorderPane>
