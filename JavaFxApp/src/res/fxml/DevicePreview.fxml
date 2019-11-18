@@ -8,63 +8,122 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="575.0" prefWidth="838.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DevicePreviewController">
-   <children>
-      <Label layoutX="750.0" layoutY="96.0" text="رقم الجهاز" textAlignment="RIGHT" />
-      <TextField fx:id="txt_device_num" disable="true" editable="false" layoutX="556.0" layoutY="92.0" prefHeight="25.0" prefWidth="174.0" />
-      <Label layoutX="745.0" layoutY="132.0" text="اسم العميل" textAlignment="RIGHT" />
-      <TextField fx:id="txt_customer_name" disable="true" editable="false" layoutX="556.0" layoutY="128.0" prefHeight="25.0" prefWidth="174.0" />
-      <Label layoutX="744.0" layoutY="172.0" text="رقم التليفون" />
-      <TextField fx:id="txt_phone_num" disable="true" editable="false" layoutX="556.0" layoutY="168.0" prefHeight="25.0" prefWidth="174.0" />
-      <Label layoutX="739.0" layoutY="276.0" text="مشكله الجهاز" />
-      <Separator layoutX="386.0" layoutY="307.0" prefHeight="0.0" prefWidth="419.0" />
-      <TextField fx:id="txt_prob" disable="true" editable="false" layoutX="507.0" layoutY="316.0" prefHeight="41.0" prefWidth="264.0" />
-      <CheckBox fx:id="Cwin7" disable="true" layoutX="758.0" layoutY="371.0" mnemonicParsing="false" text="win7" />
-      <CheckBox fx:id="Cwin8" disable="true" layoutX="671.0" layoutY="371.0" mnemonicParsing="false" text="win8" />
-      <CheckBox fx:id="Cwin10" disable="true" layoutX="568.0" layoutY="371.0" mnemonicParsing="false" text="win10" />
-      <CheckBox fx:id="Ccheck_all" disable="true" layoutX="466.0" layoutY="371.0" mnemonicParsing="false" text="check all" />
-      <CheckBox fx:id="Chardware" disable="true" layoutX="472.0" layoutY="400.0" mnemonicParsing="false" text="hardware" />
-      <CheckBox fx:id="Csoftware" disable="true" layoutX="568.0" layoutY="400.0" mnemonicParsing="false" text="software" />
-      <Label layoutX="736.0" layoutY="436.0" text="ملحقات الجهاز" />
-      <Separator layoutX="387.0" layoutY="460.0" prefHeight="3.0" prefWidth="419.0" />
-      <CheckBox fx:id="Cbattery" disable="true" layoutX="754.0" layoutY="474.0" mnemonicParsing="false" text="بطاريه" />
-      <CheckBox fx:id="Ccharger" disable="true" layoutX="671.0" layoutY="474.0" mnemonicParsing="false" text="شاحن" />
-      <CheckBox fx:id="Cbag" disable="true" layoutX="568.0" layoutY="474.0" mnemonicParsing="false" text="شنطه" />
-      <CheckBox fx:id="Ccd" disable="true" layoutX="466.0" layoutY="474.0" mnemonicParsing="false" text="CD" />
-      <Label layoutX="779.0" layoutY="536.0" text="اخري" />
-      <TextField fx:id="other" disable="true" editable="false" layoutX="539.0" layoutY="532.0" prefHeight="25.0" prefWidth="226.0" />
-      <Label layoutX="780.0" layoutY="328.0" text="اخري" />
-      <ToolBar prefHeight="50.0" prefWidth="760.0" style="-fx-background-color: #357396;" AnchorPane.bottomAnchor="525.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <items>
-            <Button fx:id="btn_back" mnemonicParsing="false" onAction="#BtnCancel" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: #357396; -fx-border-color: #fff; -fx-border-radius: 5;" text="رجوع" textFill="WHITE">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </Button>
-            <Button fx:id="btn_done" mnemonicParsing="false" onAction="#BtnDone" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #357396; -fx-border-color: #fff; -fx-border-radius: 5;" text="تمت الصيانه" textFill="WHITE" />
-            <Button fx:id="btn_not_done" mnemonicParsing="false" onAction="#BtnNotDone" prefHeight="35.0" prefWidth="72.0" style="-fx-background-color: #357396; -fx-border-color: #fff; -fx-border-radius: 5;" text="لم تتم" textFill="WHITE" />
-            <Button fx:id="btn_submit" mnemonicParsing="false" onAction="#BtnSubmit" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: #357396; -fx-border-color: #fff; -fx-border-radius: 5;" text="تسليم الي العميل" textFill="WHITE" />
-         </items>
-      </ToolBar>
-      <Label layoutX="395.0" layoutY="53.0" text="فاتوره">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
-      <Label layoutX="755.0" layoutY="216.0" text="اسم الجهاز" />
-      <TextField fx:id="device_name" disable="true" editable="false" layoutX="557.0" layoutY="212.0" prefHeight="25.0" prefWidth="174.0" />
-      <Label fx:id="txt_date_time" layoutX="640.0" layoutY="55.0" text="12/35/2012" />
-      <CheckBox fx:id="Cfill_printer" disable="true" layoutX="671.0" layoutY="400.0" mnemonicParsing="false" text="ملئ حبر" />
-      <CheckBox fx:id="Cchange_dram" disable="true" layoutX="759.0" layoutY="400.0" mnemonicParsing="false" text="تغير درام" />
-      <CheckBox fx:id="Ccable_power" disable="true" layoutX="259.0" layoutY="474.0" mnemonicParsing="false" text="كابل باور" />
-      <CheckBox fx:id="Ccable_data" disable="true" layoutX="355.0" layoutY="474.0" mnemonicParsing="false" text="كابل داتا" />
-      <Label layoutX="765.0" layoutY="55.0" text="التاريخ" />
-      <Label fx:id="txt_state" layoutX="74.0" layoutY="88.0" text="التسليم">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </Label>
-   </children>
-</AnchorPane>
+<BorderPane prefHeight="619.0" prefWidth="790.0" style="-fx-background-color: #2c96d4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DevicePreviewController">
+   <right>
+      <BorderPane prefHeight="508.0" prefWidth="545.0" BorderPane.alignment="CENTER">
+         <top>
+            <AnchorPane prefHeight="200.0" prefWidth="545.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="txt_date_time" layoutX="403.0" layoutY="14.0" text="12/35/2012" textFill="WHITE" />
+                  <Label layoutX="485.0" layoutY="14.0" text="التاريخ" textFill="WHITE" />
+                  <Label layoutX="477.0" layoutY="58.0" text="رقم الجهاز" textAlignment="RIGHT" textFill="WHITE" />
+                  <TextField fx:id="txt_device_num" editable="false" layoutX="316.0" layoutY="54.0" prefHeight="25.0" prefWidth="150.0" />
+                  <Label layoutX="473.0" layoutY="92.0" text="اسم العميل" textAlignment="RIGHT" textFill="WHITE" />
+                  <TextField fx:id="txt_customer_name" layoutX="166.0" layoutY="89.0" prefHeight="25.0" prefWidth="300.0" />
+                  <Label layoutX="471.0" layoutY="127.0" text="رقم التليفون" textFill="WHITE" />
+                  <TextField fx:id="txt_phone_num" layoutX="166.0" layoutY="125.0" prefHeight="25.0" prefWidth="300.0" />
+                  <Label layoutX="475.0" layoutY="165.0" text="اسم الجهاز" textFill="WHITE" />
+                  <TextField fx:id="device_name" layoutX="166.0" layoutY="161.0" prefHeight="25.0" prefWidth="300.0" />
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="466.0" layoutY="14.0" text="مشكله الجهاز" textFill="WHITE" />
+                  <Separator layoutX="112.0" layoutY="34.0" prefHeight="0.0" prefWidth="419.0" />
+                  <TextField fx:id="txt_prob" layoutX="164.0" layoutY="51.0" prefHeight="41.0" prefWidth="300.0" />
+                  <CheckBox fx:id="Cwin7" layoutX="433.0" layoutY="120.0" mnemonicParsing="false" text="win7" textFill="WHITE" />
+                  <CheckBox fx:id="Cwin8" layoutX="342.0" layoutY="120.0" mnemonicParsing="false" text="win8" textFill="WHITE" />
+                  <CheckBox fx:id="Cwin10" layoutX="255.0" layoutY="120.0" mnemonicParsing="false" text="win10" textFill="WHITE" />
+                  <CheckBox fx:id="Ccheck_all" layoutX="143.0" layoutY="120.0" mnemonicParsing="false" text="check all" textFill="WHITE" />
+                  <CheckBox fx:id="Chardware" layoutX="143.0" layoutY="163.0" mnemonicParsing="false" text="hardware" textFill="WHITE" />
+                  <CheckBox fx:id="Csoftware" layoutX="255.0" layoutY="163.0" mnemonicParsing="false" text="software" textFill="WHITE" />
+                  <Label layoutX="488.0" layoutY="63.0" text="اخري" textFill="WHITE" />
+                  <CheckBox fx:id="Cfill_printer" layoutX="342.0" layoutY="163.0" mnemonicParsing="false" text="ملئ حبر" textFill="WHITE" />
+                  <CheckBox fx:id="Cchange_dram" layoutX="433.0" layoutY="163.0" mnemonicParsing="false" text="تغير درام" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="121.0" prefWidth="545.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="463.0" layoutY="4.0" text="ملحقات الجهاز" textFill="WHITE" />
+                  <Separator layoutX="114.0" layoutY="24.0" prefHeight="3.0" prefWidth="419.0" />
+                  <CheckBox fx:id="Cbattery" layoutX="475.0" layoutY="39.0" mnemonicParsing="false" text="بطاريه" textFill="WHITE" />
+                  <CheckBox fx:id="Ccharger" layoutX="404.0" layoutY="39.0" mnemonicParsing="false" text="شاحن" textFill="WHITE" />
+                  <CheckBox fx:id="Cbag" layoutX="337.0" layoutY="39.0" mnemonicParsing="false" text="شنطه" textFill="WHITE" />
+                  <CheckBox fx:id="Ccd" layoutX="273.0" layoutY="39.0" mnemonicParsing="false" text="CD" textFill="WHITE" />
+                  <Label layoutX="506.0" layoutY="83.0" text="اخري" textFill="WHITE" />
+                  <TextField fx:id="other" layoutX="271.0" layoutY="79.0" prefHeight="25.0" prefWidth="226.0" />
+                  <CheckBox fx:id="Ccable_power" layoutX="100.0" layoutY="39.0" mnemonicParsing="false" text="كابل باور" textFill="WHITE" />
+                  <CheckBox fx:id="Ccable_data" layoutX="189.0" layoutY="39.0" mnemonicParsing="false" text="كابل داتا" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </bottom>
+      </BorderPane>
+   </right>
+   <top>
+      <VBox alignment="TOP_CENTER" prefHeight="97.0" prefWidth="756.0" BorderPane.alignment="TOP_RIGHT">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #357396;">
+               <items>
+                  <Button fx:id="btn_back" mnemonicParsing="false" onAction="#BtnCancel" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: #357396; -fx-border-color: #fff; -fx-border-radius: 5;" text="رجوع" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button fx:id="btn_back1" mnemonicParsing="false" onAction="#BtnSaveChange" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: #42a807; -fx-border-color: #fff; -fx-border-radius: 5;" text="حفظ التعديل" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button fx:id="btn_back11" mnemonicParsing="false" onAction="#BtnDelete" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: #d60606; -fx-border-color: #fff; -fx-border-radius: 5;" text="مسح الفاتوره" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button fx:id="btn_done" mnemonicParsing="false" onAction="#BtnDone" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #357396; -fx-border-color: #fff; -fx-border-radius: 5;" text="تمت الصيانه" textFill="WHITE" />
+                  <Button fx:id="btn_not_done" mnemonicParsing="false" onAction="#BtnNotDone" prefHeight="35.0" prefWidth="72.0" style="-fx-background-color: #357396; -fx-border-color: #fff; -fx-border-radius: 5;" text="لم تتم" textFill="WHITE" />
+                  <Button fx:id="btn_submit" mnemonicParsing="false" onAction="#BtnSubmit" prefHeight="35.0" prefWidth="109.0" style="-fx-background-color: #357396; -fx-border-color: #fff; -fx-border-radius: 5;" text="تسليم الي العميل" textFill="WHITE" />
+                  <Button fx:id="btn_print" mnemonicParsing="false" onAction="#BtnPrint" prefHeight="35.0" prefWidth="84.0" style="-fx-background-color: #357396; -fx-border-color: #fff; -fx-border-radius: 5;" text="طباعه ايصال" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+               </items>
+            </ToolBar>
+            <Label alignment="CENTER" contentDisplay="CENTER" nodeOrientation="LEFT_TO_RIGHT" text="ايصال" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <AnchorPane prefHeight="508.0" prefWidth="245.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="txt_state" layoutX="67.0" layoutY="62.0" text="التسليم" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="28.0" layoutY="178.0" text="جنيه مصري" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_price" layoutX="113.0" layoutY="163.0" prefHeight="35.0" prefWidth="118.0" text="100">
+               <font>
+                  <Font name="System Bold Italic" size="25.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
