@@ -30,18 +30,21 @@ public class Main extends Application {
 	root.setCenter(content);
         
         Scene scene = new Scene(root);
-        scene.getStylesheets().add("/res/css/stylesheet.css");
+        //scene.getStylesheets().add("/res/css/stylesheet.css");
         stage.setScene(scene);
         stage.show();
-        stage.setResizable(false);
+        //stage.setResizable(false);
+        stage.setMinHeight(700); 
+        stage.setMinWidth(1000);
+        stage.setTitle("كمبيوتر شوب");
         
     }
-
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        launch(args);
+        launch(args);        
     }
     
     public static void setContent(Node node , String title) {

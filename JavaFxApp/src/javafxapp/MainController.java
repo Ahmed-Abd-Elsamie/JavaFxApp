@@ -47,8 +47,16 @@ public class MainController implements Initializable {
     }
     
     @FXML
-    private void BtnBackup(ActionEvent event) {
-        
+    private void Btndashboard(ActionEvent event) {
+        System.out.println("Control Panel");
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/res/fxml/Dashboard.fxml"));
+            Parent root = (Parent) fxmlLoader.load();
+            Main.setContent(root, "");
+            
+        } catch (Exception e) {
+            
+        }
     }    
     
     @FXML
@@ -81,6 +89,7 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        database.DatabaseHelper.makeDB();
     }    
     
 }
