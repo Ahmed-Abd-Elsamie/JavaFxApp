@@ -40,9 +40,6 @@
   <img src="images/m5.PNG" width="250" title="hover text">
   <img src="images/m6.PNG" width="250" title="hover text">
   <img src="images/m7.PNG" width="250" title="hover text">
-  </br>
-  Search by Customer name
   <img src="images/m8.PNG" width="250" title="hover text">
-  </br>
 
 </p>
