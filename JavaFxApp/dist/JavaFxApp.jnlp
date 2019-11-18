@@ -11,8 +11,12 @@
   </resources>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="JavaFxApp.jar" size="43496" download="eager" />
+    <jar href="JavaFxApp.jar" size="81544" download="eager" />
+    <jar href="lib/httpclient-4.5.6.jar" size="767140" download="eager" />
+    <jar href="lib/json-20131018.jar" size="65139" download="eager" />
     <jar href="lib/mysql-connector-java-5.1.20.jar" size="540852" download="eager" />
+    <jar href="lib/okhttp-3.9.0.jar" size="405733" download="eager" />
+    <jar href="lib/okio-1.13.0.jar" size="81811" download="eager" />
     <jar href="lib/sqlite-jdbc-3.27.2.1.jar" size="6012107" download="eager" />
   </resources>
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="JavaFxApp" >
